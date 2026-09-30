@@ -1,0 +1,9 @@
+{
+  "appId": "com.peerlink.app",
+  "appName": "Peerlink",
+  "webDir": "www",
+  "server":{
+    "url":"http://10.118.86.42:8000",
+    "cleartext":true
+  }
+}
