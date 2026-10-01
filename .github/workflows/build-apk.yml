@@ -27,8 +27,8 @@ jobs:
 
       - name: Build Capacitor Android
         run: |
-          npx cap update
-          npx cap sync android
+          npx @capacitor/cli update android
+          npx @capacitor/cli sync android
 
       - name: Build Debug APK
         run: |
