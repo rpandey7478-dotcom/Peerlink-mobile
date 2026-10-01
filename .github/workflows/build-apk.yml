@@ -30,10 +30,11 @@ jobs:
           distribution: 'temurin'
           java-version: '17'
 
-      - name: Capacitor Sync
+      - name: Clean and Re-add Android Platform
         run: |
-          node ./node_modules/@capacitor/cli/bin/capacitor update android || node ./node_modules/@capacitor/cli/bin/capacitor add android
-          node ./node_modules/@capacitor/cli/bin/capacitor sync android
+          rm -rf android
+          npx @capacitor/cli add android
+          npx @capacitor/cli sync android
 
       - name: Build Debug APK
         run: |
